@@ -1,0 +1,24 @@
+
+{
+  "$class": "org.acme.trading.TestAsn",
+  "asnId": "asnId:0001",
+  "containers": [
+    {
+      "$class": "org.acme.trading.TestContainer",
+      "containerId": "0001",
+      "prodItems": [
+        {
+          "$class": "org.acme.trading.TestComProdItem",
+          "prodItemBarcode": "0001",
+          "orderId": "0001",
+          "prodName": "altamai gold 3",
+          "prodCode": "altamaigold3",
+          "description": "altamai gold stage 3"
+        }
+      ]
+    }
+  ],
+  "customerName": "Sunny Whollseller",
+  "customerCode": "sunnywhollseller"
+}
+

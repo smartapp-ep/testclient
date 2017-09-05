@@ -1,0 +1,8 @@
+
+{
+  "$class": "org.acme.trading.TestRetailShip",
+  "order": "resource:org.acme.trading.TestOrder#orderId:0001",
+  "sender": "resource:org.acme.trading.TestChainPart#partId:0003",
+  "comTransType": "",
+  "comTransId": ""
+}

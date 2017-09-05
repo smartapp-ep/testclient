@@ -1,0 +1,15 @@
+
+{
+  "$class": "org.acme.trading.TestOrder",
+  "orderId": "orderId:0001",
+  "prodItems": [
+    {
+      "$class": "org.acme.trading.TestComProdItem",
+      "prodItemBarcode": "0001",
+      "orderId": "0001",
+      "prodName": "altamai gold 3",
+      "prodCode": "altamaigold3",
+      "description": "altamai gold stage 3"
+    }
+  ]
+}
