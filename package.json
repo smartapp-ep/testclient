@@ -7,7 +7,7 @@
   "license": "Apache-2.0",
   "scripts": {
     "ng": "ng",
-    "app": "composer-rest-server -n my-network -p hlfv1 -i admin -s adminpw -N never -P 3000",
+    "app": "composer-rest-server -n my-network -p hlfv1 -i admin -s adminpw -N never -P 80",
     "start": "concurrently \"ng serve --host 0.0.0.0\" \"npm run app\"",
     "lint": "tslint \"src/**/*.ts\"",
     "test": "ng test --watch false",
