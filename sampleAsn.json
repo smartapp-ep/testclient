@@ -1,7 +1,8 @@
 
 {
   "$class": "org.acme.trading.TestAsn",
-  "asnId": "asnId:0001",
+  "asnId": "0001",
+  "comAsnId": "0001",
   "containers": [
     {
       "$class": "org.acme.trading.TestContainer",
@@ -11,14 +12,16 @@
           "$class": "org.acme.trading.TestComProdItem",
           "prodItemBarcode": "0001",
           "orderId": "0001",
-          "prodName": "altamai gold 3",
-          "prodCode": "altamaigold3",
-          "description": "altamai gold stage 3"
+          "prodName": "Aptamil Gold 3",
+          "prodCode": "aptamilg3",
+          "description": "Aptamil Gold Stage 3",
+          "id": "0001"
         }
-      ]
+      ],
+      "id": "0001"
     }
   ],
-  "customerName": "Sunny Whollseller",
-  "customerCode": "sunnywhollseller"
+  "customerName": "Sunny Whollsaler",
+  "customerCode": "sunny"
 }
 
