@@ -15,9 +15,9 @@ describe('Starting tests for client', function() {
     })
   });
 
-  it('navbar-brand should be my-network@0.1.8',() => {
+  it('navbar-brand should be my-network@0.1.9',() => {
     var navbarBrand = element(by.css('.navbar-brand')).getWebElement();
-    expect(navbarBrand.getText()).toBe('my-network@0.1.8');
+    expect(navbarBrand.getText()).toBe('my-network@0.1.9');
   });
 
   
