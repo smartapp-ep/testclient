@@ -59,6 +59,10 @@ import {Event} from './org.hyperledger.composer.system';
       receiver: TestChainPart;
       asn: TestAsn;
    }
+   export class TestAsnShipAuto extends TestChainTran {
+      receiver: TestChainPart;
+      asn: TestAsn;
+   }
    export class TestRetailShip extends TestChainTran {
       order: TestOrder;
       prodItemBarcodes: string[];

@@ -1,0 +1,97 @@
+ 
+<div class="container">
+	<!-- <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
+		<strong>Error:</strong> {{errorMessage}}
+	</div> --> 
+ 
+  <h1 id='assetName'>Query</h1>
+
+  <div [hidden]="submitted">
+    <form (ngSubmit)="onSubmit()" [formGroup]="myForm">
+      <!-- hear Adding a barcode in app.component.html -->
+      <div class="form-group">
+            <label for="barcode">{{ 'SSCC barcode' | translate }}</label>
+              <input type="text" class="form-control" id="barcode"
+                     required
+                     [(ngModel)]="Barcode.barcode" name="barcode"
+                     #barcode="ngModel" [ngModelOptions]="{standalone: true}">
+              <div [hidden]="barcode.valid || barcode.pristine"
+                   class="alert alert-danger">
+               Barcode is required
+            </div>
+      </div>
+            <div class="form-group text-left">
+                      <label for="description">EDI</label>
+
+                    <input formControlName="EDI" type="file" class="form-control" (change)="handleFileSelect($event)" > 
+
+            </div>
+             <div class="form-group text-left">
+                  <label for="description">ASN</label>
+
+                    <input formControlName="ASN" type="file" class="form-control"> 
+
+            </div>
+                <button type="submit" class="btn btn-success">Submit</button>
+                <button type="button" class="btn btn-default" (click)="cancle()" >cancle</button>
+    </form> 
+    
+  </div>
+ 
+  <div [hidden]="!submitted">
+    <div class="row">
+    <div class="col-md-12">
+      <table class="table table-bordered table-responsive table-striped">
+        <thead class="thead">
+          <tr class="thead-cols">
+            
+                <th class="info">prodItemBarcode</th>
+            
+                <th class="info">orderId</th>
+            
+                <th class="info">prodName</th>
+            
+                <th class="info">prodCode</th>
+            
+                <th class="info">description</th>
+            
+                <th class="info">status</th>
+            
+                <th class="info">currentOwner</th>
+            
+                <th class="info">history</th>
+            
+              
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let asset of retrieving">
+
+            
+                <td>{{asset.prodItemBarcode}}</td>
+            
+                <td>{{asset.orderId}}</td>
+            
+                <td>{{asset.prodName}}</td>
+            
+                <td>{{asset.prodCode}}</td>
+            
+                <td>{{asset.description}}</td>
+            
+                <td>{{asset.status}}</td>
+            
+                <td>{{asset.currentOwner}}</td>
+            
+                <td>{{asset.history[0].$class}}</td>
+            
+           
+          </tr>
+        </tbody>
+
+      </table>
+      <button class="btn btn-primary" (click)="submitted=false">Edit</button>
+    </div>
+  </div>
+  </div>
+
+</div>

@@ -1,0 +1,101 @@
+   
+<div class="container">
+  <h1 id='assetName'>Shipping</h1>
+
+  <div [hidden]="submitted">
+    <form (ngSubmit)="onSubmit()" [formGroup]="myForm">
+     <div class="form-group">
+        <label for="power">{{ 'participant' | translate }}</label>
+        <select class="form-control" id="power"
+                required
+                [(ngModel)]="model1.power" name="power"
+                #power="ngModel" [ngModelOptions]="{standalone: true}">
+          <option *ngFor="let pow of powers1" [value]="pow">{{pow}}</option>
+        </select>
+        <div [hidden]="power.valid || power.pristine" class="alert alert-danger">
+          Participant is required
+        </div>
+      </div>
+       <div class="form-group">
+        <label for="power">{{ 'shipping' | translate }}</label>
+        <select class="form-control" id="power"
+                required
+                [(ngModel)]="model2.power" name="power"
+                #power="ngModel" [ngModelOptions]="{standalone: true}">
+          <option *ngFor="let pow of allAssets" [value]="pow">{{pow}}</option>
+        </select>
+        <div [hidden]="power.valid || power.pristine" class="alert alert-danger">
+          Ship is required
+        </div>
+      </div>
+      <!-- hear Adding a barcode in app.component.html -->
+      <div class="form-group">
+            <label for="barcode">{{ 'SSCC barcode' | translate }}</label>
+              <input type="text" class="form-control" id="barcode"
+                     required
+                     [(ngModel)]="Barcode.barcode" name="barcode"
+                     #barcode="ngModel" [ngModelOptions]="{standalone: true}">
+              <div [hidden]="barcode.valid || barcode.pristine"
+                   class="alert alert-danger">
+                Barcode is required
+            </div>
+      </div>
+            <div class="form-group text-left">
+                      <label for="description">EDI</label>
+
+                    <input formControlName="EDI" type="file" class="form-control" (change)="handleFileSelect($event)" > 
+
+            </div>
+             <div class="form-group text-left">
+                  <label for="description">ASN</label>
+
+                    <input formControlName="ASN" type="file" class="form-control"> 
+
+            </div>
+                <button type="submit" class="btn btn-success">Submit</button>
+                <button type="button" class="btn btn-default" (click)="cancle()" >cancle</button>
+    </form> 
+    
+  </div>
+ 
+  <div [hidden]="!submitted">
+    <div class="row">
+    <div class="col-md-12">
+      <table class="table table-bordered table-responsive table-striped">
+        <thead class="thead">
+          <tr class="thead-cols">
+            
+                <th class="info">asnId</th>
+            
+                <th class="info">comAsnId</th>
+            
+                <th class="info">containers</th>
+            
+                <th class="info">customerName</th>
+            
+                <th class="info">customerCode</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let asset of allAssets">
+
+            
+                <td>{{asset.asnId}}</td>
+            
+                <td>{{asset.comAsnId}}</td>
+            
+                <td>{{asset.containers}}</td>
+            
+                <td>{{asset.customerName}}</td>
+            
+                <td>{{asset.customerCode}}</td>
+          </tr>
+        </tbody>
+            <button class="btn btn-primary" (click)="submitted=false">Edit</button>
+      </table>
+    </div>
+  </div>
+  </div>
+
+</div>

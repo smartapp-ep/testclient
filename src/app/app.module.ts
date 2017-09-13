@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpModule } from '@angular/http';
+import { HttpModule,Http } from '@angular/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { Configuration }     from './configuration';
@@ -18,7 +18,14 @@ import { ProductComponent } from './Product/Product.component';
 import { ContactComponent } from './Contact/Contact.component';
 import { OrganizationComponent } from './Organization/Organization.component';
 import { CommodityComponent } from './Commodity/Commodity.component';
+import { ShippingComponent } from './Shipping/Shipping.component';
+import { QueryComponent } from './Query/Query.component';
+import { TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
+export function createTranslateHttpLoader(http: Http) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +39,8 @@ import { CommodityComponent } from './Commodity/Commodity.component';
 		ProductComponent,
 		ContactComponent,
 		OrganizationComponent,
-		
+		ShippingComponent,
+    QueryComponent,
     CommodityComponent
 		
   ],
@@ -41,7 +49,14 @@ import { CommodityComponent } from './Commodity/Commodity.component';
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: (createTranslateHttpLoader),
+        deps: [Http]
+      }
+    })
   ],
   providers: [
     Configuration,

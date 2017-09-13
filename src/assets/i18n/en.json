@@ -1,0 +1,18 @@
+{
+  "Home": "Home",
+   "Assets":"Assets",
+  "TestProdItem": "TestProdItem",
+  "TestAsn":"TestAsn",
+   "TestOrder":"TestOrder",
+   "ProductItem":"ProductItem",
+   "ProductInfo":"ProductInfo",
+   "Product":"Product",
+   "Contact":"Contact",
+   "Organization":"Organization",
+   "Commodity":"Commodity",
+   "Shipping":"Shipping",
+   "Query":"Query",
+   "participant":"participant",
+   "shipping":"shipping",
+   "SSCC barcode":"SSCC barcode"
+}

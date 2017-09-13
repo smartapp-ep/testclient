@@ -12,6 +12,8 @@ import { ProductComponent } from './Product/Product.component';
 import { ContactComponent } from './Contact/Contact.component';
 import { OrganizationComponent } from './Organization/Organization.component';
 import { CommodityComponent } from './Commodity/Commodity.component';
+import { ShippingComponent } from './Shipping/Shipping.component';
+import { QueryComponent } from './Query/Query.component';
 
 const routes: Routes = [
     // { path: 'transaction', component: TransactionComponent },
@@ -35,6 +37,10 @@ const routes: Routes = [
 		
 		{ path: 'Commodity', component: CommodityComponent},
 		
+		{ path: 'Shipping', component: ShippingComponent},
+		
+		{ path: 'Query', component: QueryComponent},
+
 		{path: '**', redirectTo:''}
 
 ];

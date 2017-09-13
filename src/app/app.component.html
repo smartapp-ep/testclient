@@ -4,29 +4,33 @@
       <a class="navbar-brand" href="#">my-network@0.1.9</a>
     </div>
     <ul class="nav navbar-nav navbar-right">
-      <li class=""><a [routerLink]="['/']">Home</a></li>
+      <li class=""><a [routerLink]="['/']">{{ 'Home' | translate }}</a></li>
       <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Assets
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">{{ 'Assets' | translate }}
           <span class="caret"></span></a>
         <ul class="dropdown-menu">
           
-          <li><a [routerLink]="['/TestProdItem']">TestProdItem</a></li>
+          <li><a [routerLink]="['/TestProdItem']">{{ 'TestProdItem' | translate }}</a></li>
           
-          <li><a [routerLink]="['/TestAsn']">TestAsn</a></li>
+          <li><a [routerLink]="['/TestAsn']">{{ 'TestAsn' | translate }}</a></li>
           
-          <li><a [routerLink]="['/TestOrder']">TestOrder</a></li>
+          <li><a [routerLink]="['/TestOrder']">{{ 'TestOrder' | translate }}</a></li>
           
-          <li><a [routerLink]="['/ProductItem']">ProductItem</a></li>
+          <li><a [routerLink]="['/ProductItem']">{{ 'ProductItem' | translate }}</a></li>
           
-          <li><a [routerLink]="['/ProductInfo']">ProductInfo</a></li>
+          <li><a [routerLink]="['/ProductInfo']">{{ 'ProductInfo' | translate }}</a></li>
           
-          <li><a [routerLink]="['/Product']">Product</a></li>
+          <li><a [routerLink]="['/Product']">{{ 'Product' | translate }}</a></li>
           
-          <li><a [routerLink]="['/Contact']">Contact</a></li>
+          <li><a [routerLink]="['/Contact']">{{ 'Contact' | translate }}</a></li>
           
-          <li><a [routerLink]="['/Organization']">Organization</a></li>
+          <li><a [routerLink]="['/Organization']">{{ 'Organization' | translate }}</a></li>
           
-          <li><a [routerLink]="['/Commodity']">Commodity</a></li>
+          <li><a [routerLink]="['/Commodity']">{{ 'Commodity' | translate }}</a></li>
+
+          <li><a [routerLink]="['/Shipping']">{{ 'Shipping' | translate }}</a></li>
+
+          <li><a [routerLink]="['/Query']">{{ 'Query' | translate }}</a></li>
           
         </ul>
       </li>

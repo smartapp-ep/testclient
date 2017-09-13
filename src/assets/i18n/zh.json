@@ -1,0 +1,18 @@
+{
+   "Home": "首页",
+   "Assets":"资源",
+  "TestProdItem": "测试商品条目",
+  "TestAsn":"送货单",
+   "TestOrder":"订货",
+   "ProductItem":"商品条目",
+   "ProductInfo":"生产信息",
+   "Product":"生产",
+   "Contact":"内容",
+   "Organization":"组织者",
+   "Commodity":"商品",
+   "Shipping":"交付",
+   "Query":"查询",
+     "participant":"参与者",
+   "shipping":"发送",
+   "SSCC barcode":"条形码"
+}
